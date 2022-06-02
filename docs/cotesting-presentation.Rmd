@@ -17,37 +17,114 @@ output:
 ```{r setup, include=FALSE}
 require(mosaic)
 require(maxLik)
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, out.width = '65%', fig.align='center')
 ```
 
 # Motivation
 
-- Pandemic/online
-- Flipped class, building community
+.pull-left[
+- Pandemic
+- Virtual access
+- Build community
+- In-class group work
+]
+
+.pull-right[
+image of group work
+]
+---
+## Previous Work (*e.g.* [Rao *et al.* 2002](https://doi.org/10.1152/advan.00032.2001), [Newton *et al.* 2019](https://www.jstor.org/stable/26901301))
+# 2-stage collaborative tests
+
+```{r, echo = FALSE, out.width = '65%', fig.align='center'}
+knitr::include_graphics('images/ives-two-stage.png')
+```
+
+.smaller[*Image: Joss Ives, citls.lafayette.edu]
 
 ---
-# Background
+## My idea
+# Collaborative Take-home
 
-- previous approaches
-
----
-# Basic approach
-
+- One-week, take-home exam
 - Each student works on their own dataset
 - Questions are similar or identical
 - Collaboration to "figure out" encouraged
 
 ---
-#  Technical approach
+##  Technical approach
+# 1a. GitHub Repo
+
+[https://cutt.ly/cotesting-repo]
+
+```{r}
+knitr::include_graphics('images/repo-qr.png')
+```
 
 ---
-# Example: Intro stat
+##  Technical approach
+# 1b. GitHub Sites
+
+```{r, out.width='85%'}
+knitr::include_graphics('images/github-site-settings.png')
+```
+
+[URL to one test]
 
 ---
-# Example: Applied regression
+##  Technical approach
+# 2. Student Info
+
+```{r}
+knitr::include_graphics('images/class-list.png')
+```
+
+---
+##  Technical approach
+# 3. Global Instructions (for LMS)
+
+```{r}
+knitr::include_graphics('images/global-instructions.png')
+```
+
+---
+##  Technical approach
+# 3. Global Instructions (for LMS)
+
+```{r}
+knitr::include_graphics('images/global-instructions-2.png')
+```
+
+---
+##  Technical approach
+# 3. Global Instructions (for LMS)
+
+```{r}
+knitr::include_graphics('images/global-instructions.png')
+```
+
+---
+# Examples
+
+- [Intro Stat Instructions]() and [test]()
+- [Applied Regression Instructions]() and [test]()
 
 ---
 # Fork my repo
+
+.pull-left[
+[https://cutt.ly/cotesting-repo]
+
+```{r}
+knitr::include_graphics('images/repo-qr.png')
+```
+]
+
+.pull-right[
+```{r}
+knitr::include_graphics('images/repo.png')
+```
+]
 
 ---
 # + Reflections
