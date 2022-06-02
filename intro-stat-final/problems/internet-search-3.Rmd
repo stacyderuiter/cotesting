@@ -1,0 +1,31 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+Your data are from ["The search engine manipulation effect (SEME) and its possible impact on the outcomes of elections"](https://www.pnas.org/content/112/33/E4512) by Epstein and Robertson. They report results of experiments designed to measure the effects of biased internet search results on voter opinions.
+
+The experiment, which used US resident adult volunteers, randomized subjects into one of three treatment groups. All subjects looked at internet search results related to an Australian election between candidates Abbot and Gillard. The `Group` variable tells whether their search results were biased in favor of Abbot, biased in favor of Gillard, or netural.
+
+A main variable of interest is `Vote_Sway`, which measures the amount by which biased search results affect voting preferences. If `Vote_Sway` is negative, it means people changed their voting preference in favor of candidate Abbot. If `Vote_Sway` is positive, they changed preference in favor of candidate Gillard. 
+
+Each participant reported at the end whether they trusted the search results they had seen (variable `Trust_Search`).
+
+The data also includes many demographic variables: `Age`, `Sex`, `Race_Ethnicity`, `Marital_Status`, `Education`, `Employment_Status`, `Income`, and `Searches` (number of internet searches done per week in daily life). In addition, it provides political variables: `Party` affiliation, `Politics` (Conservative, Moderate, Liberal, None).
+
+Finally, the data includes `Pre_Vote`, which measures the initial preferred candidate before viewing any search results (closer to 0 = prefer Abbot, while closer to 10 = prefer Gillard).
+
+## Variable for Question 1: `Age`
+
+## Question and Variables for Part 2: Is there an association between a person's `Age` and `Politics`?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/election_searches.csv>
+
+<!-- ## Notes -->

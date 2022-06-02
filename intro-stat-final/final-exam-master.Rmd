@@ -1,0 +1,19 @@
+---
+params:
+   new_title: "Final Exam"
+title: "`r params$new_title`"
+author: "STAT 243 Spring 2021"
+date: ""
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(mosaic)
+library(tidyverse)
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r child = prob_file, warning = FALSE}
+# note: child files have no YAML header of their own.
+```

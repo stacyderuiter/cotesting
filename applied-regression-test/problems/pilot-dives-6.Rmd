@@ -1,0 +1,37 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/pwd.csv>
+
+## Response variable
+
+Please fit a regression model using as your response variable: number of feeding sounds the whale made during the dive 
+
+## Context
+
+In 2017, Saana Isojunno and colleagues published a paper, [*Individual, ecological, and anthropogenic influences on activity budgets of long-finned pilot whales*](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.2044). 
+
+They used animal-borne electronic devices to collect data on the underwater behavior of 19 pilot whales. Each row of the dataset gives data on a single dive (the dataset contains data on many sequential dives by each of the 19 whales).
+
+Variables in the dataset include:
+
+- `n_buzzes` number of feeding sounds the whale made during the dive
+- `ODBA` a measure of how much energy the whale used during the dive
+- `duration` of the dive in seconds
+- maximum `depth` of the dive in meters
+- `exposure`: whether or not the animal was exposed to naval sonar sounds (a potential stressor) during the dive
+<!-- - `sound_level` of the naval sonar sounds, if any (`sound_level` is 0 if there were none) -->
+- `dive_state`: the type of dive the animal was doing, according to biologists
+- `ind_size`: size of the animal
+- `time_of_day` in decimal hours
+- `group_size` of the group of whales the animal was with
+- `water_depth` 
+- `individual` ID
+
+*Note: please* **do not use** *any variables in the dataset not listed above.*
+

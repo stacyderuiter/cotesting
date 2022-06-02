@@ -1,0 +1,15 @@
+---
+title: "Test 2 data notes"
+author: "STAT 245, Fall 2021"
+date: "10/28/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Vietnam air pollution survey
+
+- data download: <https://data.mendeley.com/datasets/8sv4j2r9wk/2>
+- article source: <https://www.mdpi.com/2306-5729/6/4/39/htm>

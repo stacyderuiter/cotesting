@@ -1,0 +1,91 @@
+---
+title: "Prediction Plots - Many Trials Per Row Binary Models"
+author: "STAT 245, Fall 2021"
+date: "11/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+require(tidyverse)
+require(mosaic)
+require(fastR2)
+require(cluster)
+require(s245)
+
+cold2 <- readr::read_csv('https://sldr.netlify.app/data/cold2.csv') %>%
+  na.omit()
+cold2 <- cold2 %>%
+  mutate(exercise_amount = clara(exercise_hours, k = 3)$clustering,
+         ambient_temp_n = clara(mean.temperature_60, k = 2)$clustering,
+         BMI = weight / height^2)
+
+cold2 <- cold2 %>%
+  mutate(exercise = case_when(exercise_amount == which.min(mean(exercise_hours | exercise_amount, data = cold2)) ~ 'Low',
+          exercise_amount == which.max(mean(~exercise_hours | exercise_amount, data = cold2)) ~ 'High',
+          TRUE ~ 'Moderate'),
+         
+         ambient_temp = ifelse(ambient_temp_n == which.min(mean(~mean.temperature_60 | ambient_temp_n, data = cold2)), 'Cool', 'Warm'),
+         
+         BMI_cat = case_when(BMI < 18.5 ~ 'Underweight',
+                             BMI >= 18.5 & BMI < 24.9 ~ 'Moderate',
+                             BMI >=24.9 & BMI < 29.9 ~ 'Overweight',
+                             BMI >= 29.9 ~ 'Obese')) %>%
+  select(therm_pref, location, sex, exercise, 
+         ambient_temp, BMI_cat) %>%
+  mutate(therm_pref = factor(therm_pref))
+
+cold2 <- cold2 %>%
+  group_by(location, sex, exercise, ambient_temp, BMI_cat) %>%
+  summarise(pref_warmer = count(therm_pref == 'Prefer Warmer'),
+            comfortable = n() - pref_warmer) %>% 
+  ungroup()
+```
+
+If you have *multiple-trials-per-row* binary data, `pred_plot()` will fail to make a prediction plot for you (it doesn't know how to handle this type of model).
+
+If you're in this sitation for your test, it's not fair that you have to make your prediction plot by hand while others get to use `pred_plot()`!
+
+So, here is another prediction plot shortcut that you may use if you like. (We will be learning more about it next week, but you get a sneak peak).
+
+I will use the example dataset `cold2` and example fitted model `cold_mod`.
+
+```{r}
+glimpse(cold2)
+```
+
+`pref_warmer` gives the number of successes and `comfortable` the number of failures. I model the probability of preferring warmer as a function of location (as an example):
+
+```{r}
+cold_mod <- glm(cbind(pref_warmer, comfortable) ~ location,
+                data = cold2,
+                family = binomial(link = 'logit'))
+```
+
+`pred_plot()` fails:
+
+```{r, error = TRUE}
+library(s245) 
+pred_plot(cold_mod, 'location')
+```
+
+So try using `ggeffects::ggpredict()` instead.  You will need to change the model and predictor variable names in the example below to match your dataset and your model.
+
+```{r}
+library(ggeffects)
+pred_data <- ggpredict(cold_mod, 'location')
+glimpse(pred_data)
+```
+
+Model predictions (on the response scale, not the link scale) are in variable "predicted" and "x" is the predictor variable values. "conf.low" and "conf.high" give lower and upper bounds of 95% confidence intervals. Fixed values will be the mean for any quantitative variables, and the first ("reference") level for factor predictors, and the most frequently observed level of character predictors.
+
+We can make the graph like:
+
+```{r}
+gf_point(predicted ~ x, 
+         data  = pred_data) %>%
+  gf_errorbar(conf.low + conf.high ~ x)
+```
+
+You might want to customize the axis labels. 
+
+TaDa! Saved from making predictions and converting between link- and response-scale by hand...

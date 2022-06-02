@@ -1,0 +1,31 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+In their 2020 paper^[<https://journals.sagepub.com/doi/10.1177/0013916518800798> I can provide a PDF of the paper on request, but please be warned that the statistical analysis the authors did was more complex than what you will do and uses methods we have not learned.], Gunnthora Olafsdottir and others investigated the effects of walking in nature on students' psychological well-being. They hypothesized that walking in nature has positive psychological effects, more than walking on a treadmill in a gym or watching nature on TV. Healthy university student volunteers in Reykjavik, Iceland (N = 90) were randomly allocated to groups that completed 3 40-minute treatment sessions, either `nature walks,` walking on a treadmill in a `gym`, or watching a nature show on `tv`. Before and after the treatment, each student took a test to measure "positive affect" (possible scores 10-50, with higher scores indicating greater psychological well-being).  They took another test to measure "negative affect" (possible scores 10-50, with higher scores indicating more negative thoughts and feelings and *less* well-being). 
+
+Variables in the dataset include:
+
+- `treatment`: "nature walks", "gym", or "tv"
+- `PA_change`: Change in positive affect score, post-treatment minus pre-treatment
+- `NA_change`: Change in negative affect score, post-treatment minus pre-treatment
+
+
+## Variable for Question 1: `PA_change`
+
+
+
+## Question and Variables for Part 2: Is there an association between the `PA_change` and the `treatment`?
+
+<!-- Note, lack of relationship is due to simulation methond! -->
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/nature-walks.csv>
+
+<!-- ## Notes -->

@@ -1,0 +1,44 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readstata13)
+hall <- read.dta13("/Users/sld33/Dropbox/CalvinTeaching/STAT245/s245-2021/tests/test2/data/Halloween2012-2014-2015_PLOS.dta") %>%
+  select(-neob, -treat_year) 
+
+hall2 <- hall %>%
+  group_by(obama, year, age, male) %>%
+  summarize(chose_fruit = sum(fruit),
+            chose_candy = n() - chose_fruit)
+
+readr::write_csv(hall2, file = '/Users/sld33/Dropbox/academic-website/static/data/lets-move.csv')
+  
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/lets-move.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: rate at which kids picked fruit as their treat.
+
+## Context
+
+Happy Halloween!
+
+In 2018 Peter Aronow and colleagues published a paper, [The effect of images of Michelle Obama’s face on trick-or-treaters’ dietary choices: A randomized control trial](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0189693). They say,
+
+>> During her tenure as First Lady of the United States, Michelle Obama has spearheaded one of the largest public health initiatives focused on childhood obesity. In 2010, Obama unveiled her *Let’s Move* Initiative, aimed at fostering a healthy lifestyle and reducing childhood obesity. As the public face of the campaign, Obama urged healthy eating and exercise in a variety of classic and social media venues accessible to minors and their parents, including appearances on Sesame Street and Oprah and posts of online videos. We have experimentally assessed the microfoundations of Let’s Move in order to evaluate whether the public health campaign altered dietary decision-making. When children are exposed to the image of a figurehead regularly associated with the public health campaign’s message, the subconscious reminder may reinforce the message. To engage in this investigation, over three years, we ran randomized controlled trials during the evenings of Halloween when trick-or-treating was taking place.
+
+Their study was done on "1223 trick-or-treaters in New Haven over three years; on average, 8.5 years old and 53% male (among children whose gender was identifiable)." The sample included "Trick-or-treaters over the age of three that approached the house." Each kid underwent "Random assignment to the Michelle Obama side of the porch or the Comparison side of the porch" and then got to choose whether to take a piece of fruit or a piece of candy.
+
+The dataset has variables:
+
+- `obama`: whether the kid selected their treat from the side of the porch with a photo of Michelle Obama (1), or the "no Obama photo" side of the porch (0)
+- `chose_fruit`: number of kids who chose fruit
+- `chose_candy`: number of kids who chose candy
+- `year` of data collection
+- `age` of kid
+- `male` 0 if the kid was female, 1 if they were male
+

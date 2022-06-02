@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --maroon-color: #8d2232;
+    --yellow-color: #f2cc10;
+}
+
+/* Example usage
+#foo {
+color: var(--main-color);
+}*/
+  
+body {
+    font-family: 'Fira Sans';
+    font-weight: 300;
+  }
+
+h1 {
+  font-family: 'Fira Sans Condensed';
+  font-weight: 700;
+  color: var(--maroon-color);
+}
+
+h2,h3 {
+  font-family: 'Fira Sans Condensed';
+  font-weight: 700;
+  color: var(--maroon-color);
+}
+
+b, strong {
+  font-weight: 700;
+  colour: var(--maroon-color);
+}
+
+.massive-subsection h1 {
+  font-size: 400px;
+  color: var(--yellow-color);
+}
+
+.huge-subsection h1 {
+  font-size: 250px;
+  color: var(--yellow-color);
+}
+
+.big-subsection h1 {
+  font-size: 175px;
+  color: var(--yellow-color);
+}
+
+.large-subsection h1 {
+  font-size: 135px;
+  color: var(--yellow-color);
+}
+
+.inverse {
+  background-color: var(--maroon-color);
+}
+
+.subsection h1 {
+  font-size: 150px;
+  color: var(--yellow-color);
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Fira Code';
+  font-weight: 400;
+  color: var(--maroon-color);
+}
+
+.small .remark-code-line,
+.small .remark-code-line  {
+  font-size: 20px;
+  color: var(--maroon-color)
+}
+
+.small .mjx-chtml {
+  font-size: 115% !important;
+}
+
+.mjx-chtml{
+  font-size: 110% !important;
+}
+
+.large-subsection .mjx-chtml{
+  font-size: 150% !important;
+}
+
+.big .mjx-chtml{
+  font-size: 200% !important;
+}
+
+.bigger .mjx-chtml{
+  font-size: 400% !important;
+}
+
+.smaller .remark-code-line,
+.smaller .remark-code-line  {
+  font-size: 13px;
+}
+
+.remark-code {
+  font-size: 35px;
+  font-family: 'Fira Mono', 'Source Code Pro', monospace;
+  color: #8d2232;
+}
+
+  
+.remark-slide-content  {
+  font-size: 50px;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+
+.remark-slide-content h1{
+  font-size: 100px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+
+.my-title-slide {
+  background-image: url('https://calvin.edu/dotAsset/96b1b59a-6493-406f-bb71-832ac30812c2.svg');
+    background-position: right bottom 15px;
+  background-size: 30%;
+}
+
+.my-title-slide h1 {
+  color: var(--yellow-color);
+  font-size: 2em;
+}
+
+.my-title-slide .remark-slide-number {
+  display: none;
+}
+
+.small {
+  font-size: 35px;
+}
+
+.smaller {
+  font-size: 0.35em;
+}
+
+.big {
+  font-size: 2em;
+}
+
+.bigger {
+  font-size: 4em;
+}
+
+.bigger h1{
+  font-size: 2em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+.aligncenter {
+    text-align: center;
+}
+
+
+.remark-slide-number {
+  color: var(--maroon-color);
+  font-size: 0.75em;
+}
+
+.center-fig {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.text-highlight {
+  color: var(--maroon-color);
+}
+
+a {
+  color: var(--yellow-color);
+}
+
+a:hover {
+  color: var(--yellow-color);
+}
+
+a:focus {
+  color: var(--yellow-color);
+}
+
+a:visited {
+  color: var(--yellow-color);
+}

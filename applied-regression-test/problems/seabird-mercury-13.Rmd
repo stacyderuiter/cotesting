@@ -1,0 +1,32 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/seabird-mercury.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: bird breeding success (in the current year). 
+
+## Context
+
+In 2020, William Mills and colleagues published a paper, [*Mercury exposure in an endangered seabird: long-term changes and relationships with trophic ecology and breeding success*](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2020.2683). 
+
+They measured levels of mercury, and environmental contaminant that can harm birds, in the feathers of grey-headed albatrosses near Antarctica. They were interested in investigating how the mercury levels might vary over time and with birds' sex, and birds with higher mercury levels had less breeding success.
+
+Variables in the dataset include:
+
+- `bird_id`
+- `total_mercury` found in the feather
+- `foraging_habitat` of the bird (measured using the $\delta^{13}$C technique)
+- `trophic_level` of the bird (measured using the $\delta^{15}$N technique; higher means higher on the food chain)
+- `age` of the bird
+- `sex` of the bird
+- `breeding_history` for the previous two years (for example, "Failed_Not_seen" means two years ago the bird failed to breed, and one year ago it was not seen trying to breed.)
+- `breeding` is the current-year breeding success
+
+

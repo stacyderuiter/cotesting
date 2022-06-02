@@ -1,0 +1,40 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Access
+
+You can find your data at: <https://osf.io/jtkn9/download>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: whether the researcher is a man.
+
+## Context
+
+In 2021, Jessica van der Wal and colleagues published the paper, [*Collaboration enhances career progression in academic science, especially for female researchers*](https://royalsocietypublishing.org/doi/10.1098/rspb.2021.0219). They say,
+
+>> Collaboration and diversity are increasingly promoted in science. Yet how collaborations influence academic career progression, and whether this differs by gender, remains largely unknown. Here, we use co-authorship ego networks to quantify collaboration behaviour and career progression of a cohort of contributors to biennial International Society of Behavioral Ecology meetings (1992, 1994, 1996).
+
+Their dataset includes variables:
+
+- `author.name` an identifier for each person
+- `no.of.papers` number of papers that person published in their academic career
+- `Gender` 
+- `indegree` size of the person's collaborative network
+- `clusteringcoefficient.global` this value is higher if the person publishes more times with each co-author (if they have one paper with someone, they will have a lot more)
+- `strength.mean` this value is higher if the person always tends to publish with the same core group
+- `n.years` the length of the person's academic career in years
+- `Time.to.PI` time (in years) from start of career until becoming a research group leader or "principal investigator"
+- `mean.nAU` mean number of authors per paper 
+- `singleauthor.papers` number of single-author papers a researcher has published
+- `firstauthor.papers` number of first-author papers a researcher has published (these are ones where they are the primary author)
+- `lastauthor.papers` number of last-author papers a researcher has published (these are ones where they are the senior/leading member of the group doing the work)
+
+(*Please ignore any other variables in the dataset that are not in the list above!*)
+
+
+
+<!-- ## Notes -->

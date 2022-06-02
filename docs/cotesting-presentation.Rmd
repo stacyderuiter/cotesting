@@ -1,0 +1,69 @@
+---
+title: "Collaborative Tests in Applied Statistics Courses"
+author: "Stacy DeRuiter"
+date: "ACMS - Azusa Pacific University - 6/2/2022"
+output:
+  xaringan::moon_reader:
+    css: ['default', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', 'slides.css']
+    lib_dir: libs
+    nature:
+      titleSlideClass: ['inverse','middle','left',my-title-slide]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+---
+
+```{r setup, include=FALSE}
+require(mosaic)
+require(maxLik)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Motivation
+
+- Pandemic/online
+- Flipped class, building community
+
+---
+# Background
+
+- previous approaches
+
+---
+# Basic approach
+
+- Each student works on their own dataset
+- Questions are similar or identical
+- Collaboration to "figure out" encouraged
+
+---
+#  Technical approach
+
+---
+# Example: Intro stat
+
+---
+# Example: Applied regression
+
+---
+# Fork my repo
+
+---
+# + Reflections
+
+---
+# - Reflections
+
+---
+# Thank you!
+
+.pull-left[
+## Slides: 
+QR code for slides
+]
+
+.pull-right[
+## Repository: 
+QR code for repo
+]

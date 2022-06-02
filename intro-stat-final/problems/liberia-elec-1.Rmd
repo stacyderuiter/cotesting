@@ -1,0 +1,25 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+A [2021 paper by Babek Khavari and colleagues](https://www.nature.com/articles/s41597-021-00897-9) presents data on local-scale population clusters electrification rates in Liberia. Each case in your dataset is a cluster of residences in a small geographic area. They are a random sample of all such clusters in the country. For each one, the researchers have estimated:
+
+- `population`, the number of people living in the cluster
+- `area` of the cluster in square kilometers
+- `urbanization_level` of the cluster: either "rural", "peri-urban" or "urban"
+- `electrification_rate`: proportion of people in the cluster who have electricity
+
+## Variable for Question 1: `area`
+
+## Question and Variables for Part 2: Is there an association between the `electrification_rate` of a cluster and its `urbanization_level`?
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/liberia-electricity.csv>
+
+<!-- ## Notes -->

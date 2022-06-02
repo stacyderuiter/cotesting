@@ -1,0 +1,32 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+Indiana provides public access to state data at: <https://www.stats.indiana.edu/>. We will consider a dataset on benefits provided to Indiana residents by the FSSA (Indiana Family and Social Services Agency). Benefits include SNAP (food stamps) and Temporary Assistance for Needy Families (cash assistance, known as TANF). Data are recorded once each month.
+
+Variables in the dataset include:
+
+- `year` of data collection
+- `month` of data collection
+- `food_stamps_households`: Number of households receiving food stamps during the month
+- `unemployment_rate` in Indiana (as a percentage)
+- `TANF_families`: Thousands of families receiving TANF assistance during the month
+- `TANF_millions` Millions of dollars distributed by the TANF program during the month
+
+## Variable for Question 1: `TANF_millions`
+
+
+
+## Question and Variables for Part 2: Is there an association between the amount of money distributed by the TANF program, `TANF_millions`, and the number of `TANF_families`?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/indiana.csv>
+
+<!-- ## Notes -->

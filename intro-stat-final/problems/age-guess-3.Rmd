@@ -1,0 +1,34 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+According to their website,
+
+>> [AgeGuess.org](https://www.ageguess.org/home) is a simple on-line game using biological and perceived age as biomarkers to address scientific questions related to aging in humans. The AgeGuess project updates the AgeGuess.org Public Data Set every three months. AgeGuess investigates the differences between perceived age (how old you look) and chronological age (your age).
+
+The researchers leading the project rely on online volunteers who are interested in the project to upload photos of themselves to let others guess their age. They also rely on online volunteers to "play the game" of guessing others' ages, generating data.
+
+Your dataset is a random sample of 3167 age-guesses selected from all data collected to date. Variables in the dataset include:
+
+- `actual_age` of the person in the photo
+- `guessed_age`: the age that someone guessed the pictured person to be, based on their photo
+- `age_guess_error`: guessed age minus actual age
+- `ethnicity` of the person in the photo
+- `gender` of the person in the photo
+
+## Variable for Question 1: `guessed_age`
+
+
+
+## Question and Variables for Part 2: Is there an association between the `actual_age` of the person whose age is being guessed and the `age_guess_error`?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/age-guess.csv>
+

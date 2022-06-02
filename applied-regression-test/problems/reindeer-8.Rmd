@@ -1,0 +1,25 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/reindeer.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: reindeer pregnancy. 
+
+## Context
+
+Mathieu Douhard and colleagues studied the effects of weather on reproductive success in reindeer, publishing a 2016 paper called [*The influence of weather conditions during gestation on life histories in a wild Arctic ungulate*](https://royalsocietypublishing.org/doi/10.1098/rspb.2016.1760). For reindeer, frequent rain-on-snow (ROS) is bad weather. Douhard and colleagues argue that environmental conditions early in life can affect animals long-term, including their success at reproducing as adults. They gathered a dataset including variables:
+
+- `ID` of the individual female reindeer
+- `Year` of data collection
+- whether or not the reindeer was `Pregnant`
+- how much rain-on-snow (`ROS`), or *bad* weather, the reindeer experienced when very young
+- body `Condition` of the reindeer
+
+

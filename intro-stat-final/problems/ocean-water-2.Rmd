@@ -1,0 +1,22 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+Data are from the [Scripps Institution of Oceanography $CO_2$  Program](https://scrippsco2.ucsd.edu/data/seawater_carbon/ocean_time_series.html).  Variables measured include the total dissolved inorganic carbon (`DIC`, micromoles/kg) in sea water over time at three observation `Station`s, and as a function of `Depth,` (meters), `Salinity` (g/kg), and `Temp`erature (degrees Celsius). The variable `Decimal` gives the time of sample collection for each observation, in decimal years.
+
+Observations have been collected at these three `Station`s at regular time intervals for many years.
+
+## Variable for Question 1: `Temp`
+
+## Question and Variables for Part 2: Is there an association between the `Temp`erature of seawater and its `DIC` content?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/ocean-water.csv>
+

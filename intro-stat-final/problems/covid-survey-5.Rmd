@@ -1,0 +1,39 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+In 2021 Tony Cunningham and colleagues published a paper on the [*Boston College daily sleep and well-being survey data during early phase of the COVID-19 pandemic*](https://www.nature.com/articles/s41597-021-00886-y). They write,
+
+>> While there was a necessary initial focus on physical health consequences of the COVID-19 pandemic, it is becoming increasingly clear that many have experienced significant social and mental health repercussions as well. It is important to understand the effects of the pandemic on well-being, both as the world continues to recover from the lasting impact of COVID-19 and in the eventual case of future pandemics. On March 20, 2020, we launched an online daily survey study tracking participants’ sleep and mental well-being. Repeated reports of sleep and mental health metrics were collected from participants ages 18–90 during the initial wave of the pandemic (March 20 – June 23, 2020). 
+
+Variables in the dataset include:
+
+- `subject_id` of the person completing the survey
+- `country` where the person lives
+- `state` where the person lives
+- `age` of the person
+- number of `housemates` the person lives with
+- `military_status` of the person
+- `wfh`: whether the person is "working from home" during the pandemic
+- `covid_testing`: whether the person has been tested for COVID-19, and whether the result was positive or negative
+- `socialize_min`: minutes the person spent socializing by phone or video call, on the day of the survey
+- `days_until_normal`: number of days the person thinks it will be until the pandemic is over and things "return to normal" 
+- `depression_score`: higher numbers indicate more symptoms of depression are present
+- `positive_affect`: higher numbers indicate more positive feelings and attitudes and greater psychological well-being
+- `negative_affect`: higher numbers indicate more negative feelings and attitudes and lesser psychological well-being
+- `worry_scale`: higher numbers indicate the person has more worries
+- 
+
+## Variable for Question 1: `depression_score`
+
+## Question and Variables for Part 2: Is there an association between the `depression_score` a person reports during the pandemic and their `age`?
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/bc-covid.csv>
+
+<!-- ## Notes -->

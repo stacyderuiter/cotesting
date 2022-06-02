@@ -1,0 +1,19 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+In 2019, Carmen Galan-Acedo and collegues presented a [dataset on the ecological characteristics of primates](https://zenodo.org/record/2600338#.YJOLeWZKhsZ). To create the dataset, they reviewed and compiled information from 1216 scientific studies published between 1941 and 2018. In addition to taxonomic information about each primate species (`Family`, `Genus`, `Species`, and `CommonName`), they report the `Food` it eats, and the body mass in kilograms overall and for males and females (`BodyMass_kg`, `BodyMassMale_kg`, and `BodyMassFemale_kg`). Finally, they report the `IUCNStatus` of each species: whether they are of "least concern," "vulnerable," "near threatened," "endangered," or "critically endangered."
+
+## Variable for Question 1: `BodyMassFemale_kg`
+
+## Question and Variables for Part 2: For primate species, is there an association between the `BodyMassFemale_kg` and the `IUCNStatus`?
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/primate-ecology.csv>
+
+<!-- ## Notes -->

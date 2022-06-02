@@ -1,0 +1,48 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+sh <- read_csv("/Users/sld33/Dropbox/CalvinTeaching/STAT245/s245-2021/tests/test2/data/qld-shark-control-program-catch-by-species-2017.csv",
+               skip = 4)
+
+sh <- sh %>%
+  select(-`Species Code`, -...12, -...13, -...14, -...15, -`Number Caught`) %>%
+  rename(Species= `Species Name`,
+         Length = `Length (m)`,
+         Water_Temp = `Water Temp (C)`) %>%
+  filter(Species != 'Total') %>%
+  mutate(Released_Alive = ifelse(Fate == "Released alive", 'Yes', "No"),
+         Found_Dead = ifelse(Fate == 'Dead', 'Yes', 'No'))
+
+write_csv(sh, file = '/Users/sld33/Dropbox/academic-website/static/data/queensland-sharks.csv')
+  
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/queensland-sharks.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: whether a shark was found dead.
+
+## Context
+
+These data were obtained from the [Queensland, Australia shark control program](https://www.data.qld.gov.au/dataset/bb4eda21-d85d-4782-803d-c67393fb2da9). Their description of the data reads:
+
+>> The shark control program (SCP) relies on nets or drumlines, or a combination of both, to minimise the threat of shark attack on humans in particular locations. [The data contains] information on numbers and locations of sharks that have been caught by the SCP.
+
+The data you will work with are from the year 2017. Variables in the dataset are:
+
+- shark '`Species`
+- `Date` when shark was caught
+- `Area` where shark was caught
+- `Location` where shark was caught (a subset of `Area`; a specific beach)
+- `Latitude` where shark was caught
+- `Longitude` where shark was caught
+- `Fate` of shark: "Dead", "Euthanized" or "Released alive"
+- `Length` of shark in meters
+- `Water_Temp` where shark was found in degrees Celsius
+- `Released_Alive` whether shark was released alive
+- `Found_Dead` whether shark was found dead

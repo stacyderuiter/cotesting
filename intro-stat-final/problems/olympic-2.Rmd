@@ -1,0 +1,33 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+Since the first [Olympic Games](https://olympics.com/en/) in 1896, nearly 300,000 athletes have competed in the games. Your dataset contains a random sample of 8921 athletes who competed in the Olympics between 1896 and 2016.
+
+Variables included in the dataset include:
+
+- `Name` of the athlete
+- `Sex` of the athlete
+- `Age` of the athlete in years
+- `Height` of the athlete in centimeters
+- `Weight` of the athlete in kilograms
+- `Year` of the Olympic competition
+- `Team`: the country for which the athlete competed
+- `Season` of the Games: "Summer" or "Winter"
+- `Sport` the athlete competed in
+- `Medal` won by the athlete
+
+## Variable for Question 1: `Height`
+
+## Question and Variables for Part 2: Is there an association between the `Height` of an Olympic athlete and their `Weight`?
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/olympic-sample.csv>
+
+<!-- ## Notes -->

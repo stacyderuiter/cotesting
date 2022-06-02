@@ -1,0 +1,43 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+The Bechdel Test is a measure of womens' role in a film from a 1985 comic by Alison Bechdel:
+
+
+```{r, echo = FALSE, out.width = '60%'}
+knitr::include_graphics('https://dykestowatchoutfor.com/wp-content/uploads/2014/05/The-Rule-cleaned-up.jpg')
+```
+
+(of course, [this is *not* a perfect test](https://www.theverge.com/2017/12/22/16807424/alternatives-bechdel-test-bad-moms-lena-waithe).)
+
+We have limited the data to the years 1990 - 2013, since the dataset creators say "the data has significantly more depth since then".
+
+ The data was compiled by fivethirtyeight.com staff from two sources:
+
+>> BechdelTest.com and The-Numbers.com. The site BechdelTest.com is operated by committed moviegoers who analyze films and ascertain if they pass the Bechdel test. The site has detailed, coded information for about 5,000 films. To find financial information on these films, we went to The-Numbers.com, a leading site for box office and budget data. It inventories financial information for roughly 4,500 films. The intersection of The-Numbers and BechdelTest was a set of 1,615 films released between 1990 and 2013. When considering the financial information, we adjusted all numbers for inflation, using 2013 dollars. While hardly a complete record of contemporary films, this gave us a sample that has both rigorous evaluations of female character involvement as well as the most accurate financial data available online.
+
+Each case in the dataset is a film; variables include:
+
+- `year` the film was released
+- `title` of the film
+- `clean_test` whether and how the film passed the Bechdel test. "ok" means it passed; "notalk" and "dubious" and "men" and "nowomen" are different ways to fail the test.
+- `roi` is the return on investment of the film: gross earnings divided by total budget
+- `profit_millions` International gross minus budget in millions of dollars
+
+
+## Variable for Question 1: `year`
+
+
+## Question and Variables for Part 2: Is there an association between the `year` of a film's release and its `clean_test` score on the Bechdel test?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/bechdel-movies.csv>
+

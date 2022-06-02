@@ -1,0 +1,41 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+b <- read_csv('https://sldr.netlify.app/data/seabird-mercury.csv')
+b2 <- b %>%
+  group_by(age) %>%
+  summarise(total_mercury = median(total_mercury),
+            foraging_habitat = median(foraging_habitat),
+            sex = first(sex),
+            bird_ID = first(bird_ID),
+            breeding_successes = sum(breeding == "Successful"),
+            breeding_failures = n() - breeding_successes) 
+write_csv(b2, file = '/Users/sld33/Dropbox/academic-website/static/data/mercury-birds.csv')
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/mercury-birds.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: rate at which birds have chicks (breed successfully).
+
+## Context
+
+In 2020, William Mills and colleagues published a paper, [*Mercury exposure in an endangered seabird: long-term changes and relationships with trophic ecology and breeding success*](https://royalsocietypublishing.org/doi/full/10.1098/rspb.2020.2683). 
+
+They measured levels of mercury, and environmental contaminant that can harm birds, in the feathers of grey-headed albatrosses near Antarctica. They were interested in investigating how the mercury levels might vary over time and with birds' sex, and birds with higher mercury levels had less breeding success.
+
+Variables in the dataset include:
+
+- `total_mercury` found in bird feathers
+- `foraging_habitat` of the birds (measured using a $\delta^{13}$C technique)
+- `trophic_level` of the birds (measured using a $\delta^{15}$N technique; higher means higher on the food chain)
+- bird `age` 
+- bird `sex` 
+- `breeding_successes` observed (on success is a season in which a bird has a chick)
+- `breeding_failures` observed (one failure is a season in which a bird does not have a chick)
+
+

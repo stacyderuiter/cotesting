@@ -1,0 +1,59 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+sh <- read_csv("/Users/sld33/Dropbox/CalvinTeaching/STAT245/s245-2021/tests/test2/data/qld-shark-control-program-catch-by-species-2017.csv",
+               skip = 4)
+
+sh <- sh %>%
+  select(-`Species Code`, -...12, -...13, -...14, -...15, -`Number Caught`) %>%
+  rename(Species= `Species Name`,
+         Length = `Length (m)`,
+         Water_Temp = `Water Temp (C)`) %>%
+  filter(Species != 'Total') %>%
+  mutate(Released_Alive = ifelse(Fate == "Released alive", 'Yes', "No"),
+         Found_Dead = ifelse(Fate == 'Dead', 'Yes', 'No'))
+
+sh2 <- sh %>%
+  group_by(Species, Area, Location) %>%
+  summarize(Found_Dead = sum(Fate == "Dead"),
+            Found_Alive = n() - Found_Dead,
+            Released_Alive = sum(Fate == 'Released alive'),
+            Not_Released_Alive = n() - Released_Alive,
+            Length = median(Length, na.rm = TRUE),
+            Water_Temp = median(Water_Temp, na.rm = TRUE),
+            Total_Sharks = n())
+            
+
+write_csv(sh2, file = '/Users/sld33/Dropbox/academic-website/static/data/sharks-queensland.csv')
+  
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/sharks-queensland.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: whether a shark was found dead.
+
+## Context
+
+These data were obtained from the [Queensland, Australia shark control program](https://www.data.qld.gov.au/dataset/bb4eda21-d85d-4782-803d-c67393fb2da9). Their description of the data reads:
+
+>> The shark control program (SCP) relies on nets or drumlines, or a combination of both, to minimise the threat of shark attack on humans in particular locations. [The data contains] information on numbers and locations of sharks that have been caught by the SCP.
+
+The data you will work with are from the year 2017. Variables in the dataset are:
+
+- shark '`Species`
+- `Area` where shark was caught
+- `Location` where shark was caught (a subset of `Area`; a specific beach)
+- `Length` median shark lengthin meters
+- `Water_Temp` median water temperature in degrees Celsius
+- `Released_Alive` whether shark was released alive
+- `Found_Dead` sharks found dead
+- `Found_Alive` sharks found alive (total number minus those found dead)
+- `Released_Alive` sharks released alive
+- `Not_Released_Alive` sharks not released alive (total number minus those released alive)
+- `Total_Sharks` sharks caught

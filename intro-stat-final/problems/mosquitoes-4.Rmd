@@ -1,0 +1,44 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+In 2019, Catherine Moyes and colleagues published a paper, [*Analysis-ready datasets for insecticide resistance phenotype and genotype frequency in African malaria vectors*](https://www.nature.com/articles/s41597-019-0134-2). They note,
+
+>>The impact of insecticide resistance in malaria vectors [mosquitoes] is poorly understood and quantified. Current malaria control activities are heavily reliant on [mosquito] control using insecticides, which means resistance to these compounds has the potential to derail control efforts. Studies have started to investigate the impact of resistance in certain situations but a full understanding of impact requires comprehensive quantification of resistance.
+
+To improve the situation, these authors have compiled a large database with the goal:
+
+>> to collate data from multiple studies characterising the insecticide resistance ... in communities of malaria vectors at as many locations and times as possible.
+
+>> Data were obtained from published journal articles, published reports, and unpublished datasets. Published journal articles were identified in the Web of Science bibliographic database by using the search terms “insecticide resistance” and “anopheles” together with the name of each malaria endemic country in turn. In addition, agencies reporting on vector surveillance and groups involved in large studies that had not yet published their results, were asked to provide these reports and unpublished datasets.
+
+Each row of the data contains information from one trial in which mosquitoes of a certain type were exposed to a particular insecticide.
+
+Variables in the datsaet include:
+
+- `country` where the study was done
+- `year` of experiment
+- `month` of experiment
+- `latitude` and `longitude` of study location
+- `insecticide_class`: broad group of insecticide tested
+- `insecticide`: specific insecticide tested
+- `percent_mortality`: percent of mosquitoes exposed to insecticide that died
+
+
+
+
+## Variable for Question 1: `latitude`
+
+
+## Question and Variables for Part 2: Is there an association between the `percent_mortality` observed and the `insecticide_class` being used?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/mosquito-resistance.csv>
+

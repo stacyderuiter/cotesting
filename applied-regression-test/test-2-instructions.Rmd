@@ -1,0 +1,55 @@
+---
+title: "Test 2 Instructions"
+author: "S245 2021"
+date: "10/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+This is a take-home test, due on Friday November 5 at **11:59pm**.
+
+Submit the knitted PDF or HTML version of an Rmarkdown file. Be sure your submission shows all necessary code and calculations.
+
+## Your Data
+
+You can find your test dataset and details online, at a url like:
+
+**https://stacyderuiter.github.io/s245-2021/test2-YOUREMAIL.html**
+
+Replace "YOUREMAIL" with your email ID. For example, my email is sld33@calvin.edu, so my URL would end with "test1-sld33.html".
+
+## Resources
+
+This is an "open-note" test and the only time limit is the due date. But I hope most students can complete the test within 3-4 hours.
+
+You may use resources like RStudio, your class notes, tutorials, and your text book.
+
+*You may collaborate with other current STAT 245 students if you like, but each of you must solve only your own problem in the end.*
+
+All work submitted must be your own.
+
+## Test Question
+
+*Your personal url (see above) will provide details about the model you will fit and the dataset you will use. Fit a regression model using the response variable indicated on your test.*
+
+Include in your submission:
+
+- (5%) You are going to fit a regression model. What specific research question will you hope to answer, using the results?
+- (10%) Rationale for model plan: Provide a rationale for your choice of predictor variables to include in your model.
+- (10%) Data exploration/graphics: present a well-designed graph that shows the data most relevant to your research question. It should include your response variable and at least one predictor. Accompany your graph with a 2-3 sentence explanation of what you learn from it. (*Note: adequate data exploration would usually require more than one graph, but only one graph is requested here to make the test shorter*)
+- (5%) Fit the model 
+- (10%) Show the model summary and model equation.
+- (10%) Provide a brief rationale for your choice of model family (type of count or binary regression, and link function). If you do count regression, include an explanation of why you did or did not include an offset. If you do binary regression, include an explanation of why you used the link function that you did.
+- (15%) Assessment: Show a scaled residuals vs. fitted plot. State which condition(s) it lets you check, and whether condition(s) are met. Cite evidence you see in the graph to support your decision. (*Normally of course we'd check all conditions, but here you need not, to keep the test shorter.*)
+- (10%) Selection: use hypothesis testing or an information criterion to do model selection relevant to your specific research question. Interpret the results very briefly (longer conclusions are the last part of the test).
+- (10%) Generate, display and interpret (at least) one prediction plot.
+- (15%) Interpretation and conclusion: Taking into account all your work so far, provide your best answer to your research question. What story did you extract from the data by doing this analysis?
+
+
+## Scoring
+A detailed rubric is provided on the Moodle assignment page so you can anticipate exactly how your test will be scored.

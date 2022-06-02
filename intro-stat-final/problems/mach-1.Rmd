@@ -1,0 +1,29 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+This dataset comes from an online version of a [test for Machiavellian personality characteristics](https://openpsychometrics.org/tests/MACH-IV/).  It contains scores and other information for many people who chose to visit the web site and complete the test.  According to the web site, 
+
+>>Niccolò Machiavelli was an Italian politician and philosopher in the Renaissance who is famous for his advocacy of political ethics that views effectiveness as more important that morality. He is the source of the phrase "the ends justify the means". In the 1960s, social psychologists Richard Christie and Florence L. Geis collected statements from Machiavelli's writings and asked people how much they agreed with each. From their research they concluded that Machiavellianism exists as a distinct personality trait. They published the MACH-IV to measure this trait in 1970 and it has been a popular instrument ever since.
+
+It contains variables:
+
+- `age` self-reported age of the person
+- `gender` of the person
+- `score` on the test (higher means more Machiavellian)
+- `seconds_elapsed`: time it took to complete the test, in seconds
+
+## Variable for Question 1: `age`
+
+## Question and Variables for Part 2: Is there an association between the `age` of a person and their `score` on the test?
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/mach.csv>
+
+<!-- ## Notes -->

@@ -1,0 +1,99 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+wr <- read_csv("/Users/sld33/Dropbox/CalvinTeaching/STAT245/s245-2021/tests/test2/data/world-renew-program-data.csv")
+
+wr <- wr %>%
+  rename(Participant_ID = `Respondent number from survey`,
+         Age_Group = `RECODE of age_n (Age Group)`,
+         Savings_Program = `Savings Program`,
+         Leadership_Program = `Community Leadership Program`,
+         Agriculture_Program = `Agriculture Program`,
+         Literacy_Program = `Literacy Program`,
+         n_Programs = `Number of program activities engaged in by respondents`,
+         FFS = `Food frequency score (FFS)` ,
+         FDS = `Food diversity score (FDS)`,
+         Months_Enough_Food = `Number of months with enough food (sum of a3_jan_n to a3_dec_n)`,
+         Months_Insufficient_Food = `Seasonal Food Security Score (SFSS) or Number of months without enough food (12-`,
+         Business_Plan = `Has a business plan - unwritten or written`,
+         Management_Confidence = `Confidence in management ability - somewhat or very`,
+         Sustainable_Ag_Practices = `Practice one or more sustainable agricultural practices...25`,
+         Minimum_Tillage = `Uses minimum tillage (CA Principle #1)`,
+         Soil_Covered = `Keeps soil covered (CA Principle #2)`,
+         Crop_Rotation = `Practices intercropping and/or crop rotation (CA Principle #3)`,
+         All_Sustainable_Practices = `Complete CA adoption (adopting all 3 principles)`,
+         Increased_Yield = `Noticed an increased yield from sustainable agricultural practices`,
+         Drought_Disease_Resistance = `Growing at least one disease resistant or drought tolerant crop`,
+         Sustainable_Useful = `Sustainable agricultural practices are somewhat or very useful`,
+         Literacy_Helped = `Literacy skills helped -- management of IGA, community group, self-esteem`,
+         Increased_Knowledge = `Perceived level of knowledge now is greater than before` ,
+         Meals_Missed = `Meals not consumed`,
+         Food_Ran_Out = `Ran out of food...84`,
+         
+  ) %>%
+  select(Participant_ID, Country, Partner, Gender, Town, District,
+         Age_Group, Savings_Program, Leadership_Program,
+         Agriculture_Program, Literacy_Program, n_Programs, FFS, FDS, Months_Enough_Food,
+         Months_Insufficient_Food, Business_Plan, Management_Confidence, Sustainable_Ag_Practices,
+         Minimum_Tillage, Soil_Covered, Crop_Rotation, All_Sustainable_Practices, Increased_Yield,
+         Drought_Disease_Resistance, Sustainable_Useful, Literacy_Helped, Increased_Knowledge,
+         #Meals_Missed, 
+         Food_Ran_Out, Vegetables, Fruits)
+
+# glimpse(wr)
+write_csv(wr, file = '/Users/sld33/Dropbox/academic-website/static/data/sustainable-livelihoods.csv')
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/sustainable-livelihoods.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: rate of **not** having enough food.
+
+## Context
+
+*Notes: text here is excerpted from the project final report. This is the project Michaeal Wagg presented to us in his guest lecture.*
+
+World Renew implemented Sustainable Livelihoods, a five-year project in Bangladesh, Honduras, Mali, Mozambique, and Tanzania to enhance livelihood security for vulnerable households. The Sustainable Livelihoods program worked to build the adaptive capacity of individual households, as well as communities, to manage climate change risks. Poverty in the communities where the program operated is manifested by poor health, low incomes, food insecurity, landlessness, illiteracy and underemployment. Small-scale farmers are challenged by declining soil fertility, lack of secure land tenure, erratic weather and lack of access to credit and inputs. These conditions lead to food shortages and poor nutrition and health. In addition, poor urban households lack skills for employment and financing for small enterprises.
+
+About 80% of the program participants were subsistence farmers who depend on rain-fed agriculture for their livelihoods. The other 20% of program participants belonged to poor households in urban areas, many of them living in slums where living conditions are crowded and unsanitary. 
+
+Participants had access to one or more training opportunities designed to promote or improve financial savings, leadership, literacy, and agricultural practices.
+
+World Renew collected data to measure the impact of the Sustainable Livelihoods program including variables:
+
+- `Participant_ID`, unique ID for each participant
+- `Country`
+- `Partner` organization
+- `Gender` of participant
+- `Town` where the person lives
+- `District` where the person lives
+- `Age_Group` of the person completing the survey
+- `Savings_Program`, whether the person participated in the financial savings program
+- `Leadership_Program`, whether the person participated in the leadership training program
+- `Agriculture_Program`, whether the person participated in the sustainable agriculture program
+- `Literacy_Program`, whether the person participated in the literacy program
+- `n_Programs`, number of programs the person participated in
+- `FFS`, food frequency score (a measure of food security)
+- `FDS`, food diversity score (a measure of food security and diverse diet)
+- `Months_Enough_Food`, months (out of the 12 in the past year) where the person had enough food
+- `Months_Insufficient_Food`, months (out of the 12 in the past year) where the person *did not* have enough food
+- `Business_Plan`, whether the person had a business plan 
+- `Management_Confidence`, whether the person had confidence in their management skills
+- `Sustainable_Ag_Practices`, whether the person practiced sustainable agriculture
+- `Minimum_Tillage`, whether the person used minimum tillage (a sustainable farming practice)
+- `Soil_Covered`, whether the person kept soil covered (a sustainable farming practice)
+- `Crop_Rotation`, whether the person rotated crops (a sustainable farming practice)
+- `All_Sustainable_Practices`, whether the person did all three sustainable farming practices: minimum tillage, soil covered, and crop rotation
+- `Increased_Yield`, whether the person had had increased farming yield after program participation
+- `Drought_Disease_Resistance`, whether the person was growing drought- or disease-resistant seeds
+- `Sustainable_Useful`, whether the person thought sustainable farming practices were useful
+- `Literacy_Helped`, whether the person thought the literacy program helped them
+- `Increased_Knowledge`, whether the person said their knowledge had increased
+- `Food_Ran_Out`, whether or not the person ran out of food during the study period
+- `Vegetables`, whether the person, others in the family, or no one ate vegetables
+- `Fruits`, whether the person, others in the family, or no one ate fruits

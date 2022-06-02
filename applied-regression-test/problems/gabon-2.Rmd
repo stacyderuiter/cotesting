@@ -1,0 +1,49 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+g1 <- read_csv('https://sldr.netlify.app/data/koerner_gabon_defaunation.csv')
+g2 <- g1 %>%
+  mutate(LandUse = ifelse(LandUse == 'Park', 'National Park', 'Outside Park'))
+write_csv(g2, file = '/Users/sld33/Dropbox/academic-website/static/data/koerner_gabon_defaunation2.csv')
+```
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/koerner_gabon_defaunation.csv>
+
+## Response Variable
+
+Please fit a regression model using as your response variable: total species richness (number of animal species present, including both birds and mammals). 
+
+## Context
+
+In 2016, Sally Koerner and colleagues published the paper [*Vertebrate community composition and diversity declines along a defaunation gradient radiating from rural villages in Gabon*](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/1365-2664.12798). They claim that in their study area in rural Gabon,
+
+>>Hunting is concentrated within 10 km around villages, creating a hunting halo characterized by heavily altered animal communities composed of relatively small-bodied species... Resource management strategies should take into account this hunting-induced spatial variation in animal communities. Near villages, resource management should focus on sustainable community-led hunting programmes that provide long-term supplies of wild meat to rural people. Resource management far from villages should focus on law enforcement and promoting industry practices that maintain remote tracts of land to preserve ecosystem services like carbon storage and biodiversity.
+
+The dataset contains variables measuring hunting activity and plant and animal diversity at varying distances from villages in Gabon, including:
+
+- `TransectID`: Unique number given to each of the 24 sites
+- `Distance` to the nearest village in km
+- `HuntCat`: Hunting intensity category, assigned based on `Distance` (<6 km is "High", 6-15 km is "Moderate", >15 km is "None")
+- `NumHouseholds`: number of households in the nearest village
+- `LandUse` in the area
+- `Diversity_AllSpecies` A measure of the diversity of animal species present, computed using the Shannon-Weiner index
+- `Rich_AllSpecies` Number of animal species present; Equal to `Rich_BirdSpecies` + `Rich_MammalSpecies`
+- `Rich_BirdSpecies` Number of bird species present
+- `Rich_MammalSpecies` Number of mammal species present
+- `Evenness_AllSpecies` Large vertebrate community evenness. This number is higher when different species are present in more equal proportions
+- `RA_Apes`, `RA_birds`, etc. Relative abundance of the animal group
+- `Veg_Rich`		Mean tree richness in 8 measured $78.5 m^2$ plots. Units:	Number of tree species
+- `Veg_Stems`		Mean tree stem density in 8 measured  $78.5 m^2$ plots. Units:	Number of tree stems
+- `Veg_liana`		Mean liana stem density in 8 measured  $78.5 m^2$ plots. Units:	Number of liana stems
+- `Veg_DBH`		Mean individual tree Diameter at Breast Height in 8 measured  $78.5 m^2$ plots. Units:	cm
+- `Veg_Canopy`		Mean canopy cover in 8 measured  $78.5 m^2$ plots. 0 means open canopy, no cover; and 4 means 100% canopy cover, closed canopy
+- `Veg_Understory`		Mean understory cover in 8 measured  $78.5 m^2$ plots, with 0 being open understory and 4 being 100% closed understory
+
+
+(*Please ignore any other variables in the dataset that are not in the list above!*)
+
+<!-- ## Notes -->

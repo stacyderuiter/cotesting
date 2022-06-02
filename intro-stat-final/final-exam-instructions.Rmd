@@ -1,0 +1,65 @@
+---
+title: "Final Exam Instructions"
+author: "S243 2021"
+date: "5/6/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Instructions
+
+This is a cumulative take-home final exam, due on Thursday May 13 at **11:59 -- noon**.
+
+Submit the knitted PDF or HTML version of an Rmarkdown file plus a scanned PDF or image of any handwritten work. Be sure your submission shows all necessary code and calculations.
+
+## Your Data
+
+You can find your exam dataset and details online, at a url like:
+
+**https://stacyderuiter.github.io/s243-2021/final-exam-EMAIL.html**
+
+Replace "EMAIL" with your email ID. For example, my email is sld33@calvin.edu, so my URL would end with "final-exam-sld33.html".
+
+## Resources
+
+This is an "open-note" test and the only time limit is the due date.
+
+You may use resources like RStudio, your class notes, tutorials, and your text book.
+
+You may collaborate with other current STAT 243 students if you like, but each of you must solve only your own problem in the end.
+
+All work submitted must be your own.
+
+## Questions
+
+*Your personal url (see above) will detail data access, context, and variables to use in your analysis.*
+
+Numbers in parentheses are the points awarded for each part. There are 100 points total.
+
+### 1. Characterize one variable
+
+- (7.5 points) Create a customized, well-designed graph to visualize the distribution of your variable.
+- (5 points) Describe in words the distribution of your variable. 
+- (5 points) Choose the summary statistics you would use to measure the *center* and *spread* of your variable, briefly justifying your answer.
+- (15 points) Compute a bootstrap confidence interval for your chosen measure of center, reporting your results in context.
+- (5 points) Select a PDF to fit to your data variable, justifying your choice in relation to the *shape* and *support* of the data distribution.
+- (5 points) Fit the PDF to the data, and report the fitted parameter estimates (CIs *not* required).
+- (7 points) Show a histogram of the data with the fitted PDF overlaid.
+- (3 points) Evaluate how well the PDF fits the data in a sentence or two.
+
+### 2. Two-variable test
+
+- (7.5 points) Create a customized, well-designed graph that shows your two variables and helps answer your assigned question.
+- (4 points) Identify the *population* about which you think you can make inferences using this dataset, and explain your reasoning with reference to the information you were given about the sampling scheme used to collect the data.
+- (6 points) State the hypotheses that you will test to answer your question (make sure to use appropriate notation, and define any notation you use).
+- Normally, we check *all* required conditions before doing a test, and do not continue unless all conditions are met. For this test, to save time, *you will focus on only* **one** *condition*. 
+  - (2 points) State *one* condition, **other than the "representative sample" condition**, that must hold to carry out the test you will use to answer your question.
+  - (3 points) Clearly indicate whether the condition is met by your dataset, explaining your reasoning.
+- (15 points) Carry out the test, reporting the p-value and your conclusion in context. 
+  - If you use a difference in means, medians, or proportions, be sure to indicate which group has the larger mean/median/proportion.
+  - If you use a linear regression, include the model equation in your answer.
+  - If you use an ANOVA, follow it with pairwise comparisons if appropriate so you can indicate which pairs of means are different.
+- (15 points) Include with your answer a *hand-drawn sketch* of the null sampling distribution corresponding to the test you just did. Make sure it is to scale (on the x-axis) and includes an informative x-axis label. Your test statistic and the area corresponding to your p-value should be shown on the plot.

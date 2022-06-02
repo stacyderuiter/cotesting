@@ -1,0 +1,25 @@
+
+
+```{r setup-child, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Context
+
+Does diversity lead to innovation in academia? If so, why don’t minority scholars dominate?
+
+You will consider a dataset on novelty (a measure of innovation) and uptake (a measure of how enthusiastically innovative ideas are taken up) in PhD theses. (Each case is one person's PhD work.) The dataset also records PhD recipients’ `field` of study, `year` of graduation, `sex` (binary Male/Female only), and `race_ethnicity`. Finally, the data includes variables `prop_same_sex` and `prop_same_race`. These measure the proportion of peers who are the same sex or race/ethnicity as the graduate. Lower values mean the individual is more unique in their field, adding gender or racial/ethnic diversity by their presence.
+
+Note: Your dataset is based on conclusions from Hofstra and colleagues (2020), [*The Diversity-Innovation Paradox in Science*](https://www.pnas.org/content/117/17/9284), but simulated since the real data are not public. Optionally, you can review the paper for more background.
+
+## Variable for Question 1: `uptake`
+
+## Question and Variables for Part 2: Is there an association between the `uptake` and the `prop_same_sex`?
+
+
+
+## Data Access
+
+You can find your data at: <https://sldr.netlify.app/data/phd_innovation.csv>
+
+<!-- ## Notes -->
