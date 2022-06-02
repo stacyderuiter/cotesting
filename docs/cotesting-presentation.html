@@ -30,11 +30,26 @@ class: inverse, middle, left, my-title-slide, title-slide
 - Build community
 - In-class group work
 ]
-]
 
 .pull-right[
-image of group work
+&lt;img src="https://i0.wp.com/sahanjournal.com/wp-content/uploads/2020/09/DSC05700.jpg?w=1800&amp;ssl=1" width="100%" style="display: block; margin: auto;" /&gt;
 ]
+
+&lt;br&gt;
+.small[*Image: https://www.cristoreytc.org/apps/news/article/1293215*]
+---
+.smaller[
+
+&gt;&gt; Kurt Schaefer, working from the premise that the Reformed tradition of ways of *knowing well* can inform faith-learning integration..., advances a thesis about the communal nature and ultimate motivations of the scientific project.
+
+&gt;&gt; [there] might be an expectation to work “readily and joyfully for the service and enrichment” of others (Heidelberg Catechism, Q.55): dispositions and motives (Augustine’s “loves”) matter, and respectful and joyful cooperation animated by the Spirit is the evidence.
+
+&gt;&gt; ...statistics is a discipline between disciplines, sometimes requiring expertise in multiple areas but even more often a willingness to engage, learn and communicate with others.
+
+&gt;&gt; So to (re)form a data scientist adept at navigating these human elements, a welcoming community where communication and collaboration are expected and practiced, as part of the workload but also allowing for connections beyond it, is valuable. It is particularly important in the current moment where isolation and disconnection proliferate.
+
+]
+
 ---
 ## Previous Work (*e.g.* [Rao *et al.* 2002](https://doi.org/10.1152/advan.00032.2001), [Newton *et al.* 2019](https://www.jstor.org/stable/26901301))
 # 2-stage collaborative tests
@@ -44,7 +59,7 @@ image of group work
 .smaller[*Image: Joss Ives, citls.lafayette.edu]
 
 ---
-## This approach
+## My idea
 # Collaborative Take-home
 
 - One-week, take-home exam
@@ -54,33 +69,150 @@ image of group work
 
 ---
 ##  Technical approach
+# 1a. GitHub Repo
+
+.center[
+&lt;https://cutt.ly/cotesting-repo&gt;
+
+&lt;img src="images/repo-qr.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+]
 
 ---
-# Example: Intro stat
+##  Technical approach
+# 1b. GitHub Sites
+
+&lt;img src="images/github-site-settings.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+.small[
+&lt;https://stacyderuiter.github.io/cotesting/test2-Six.Student.html&gt;
+]
 
 ---
-# Example: Applied regression
+##  Technical approach
+# 2. Student Info
+
+&lt;img src="images/class-list.png" width="97%" style="display: block; margin: auto;" /&gt;
+
+---
+##  Technical approach
+# 3. Global Instructions
+
+&lt;img src="images/global-instructions.png" width="97%" style="display: block; margin: auto;" /&gt;
+
+---
+##  Technical approach
+# 3. Global Instructions
+
+&lt;img src="images/global-instructions-2.png" width="97%" style="display: block; margin: auto;" /&gt;
+
+---
+##  Technical approach
+# 4. Master Test Rmarkdown
+
+&lt;img src="images/master-test.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+##  Technical approach
+# 5. Data (so much data)
+
+&lt;img src="https://www.sas.com/en_nz/insights/articles/big-data/big-data-privacy/_jcr_content/par02/image_df5.img.jpg/1457720090592.jpg" width="35%" style="display: block; margin: auto;" /&gt;
+
+.center[
+.small[*Image: https://www.sas.com*]
+]
+
+---
+##  Technical approach
+# 6. Problem Rmarkdown files
+
+&lt;img src="images/problem-files.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+##  Technical approach
+# 7. R script to generate tests
+
+.small[
+
+```r
+for (s in c(1:nrow(student_emails))){
+  student_id &lt;- student_emails |&gt; pull(short_email) |&gt; nth(s)
+  prob_file &lt;- paste0('problems/', problem_files[s])
+  render("final-exam-master.Rmd",
+         output_file = paste0("individual-tests/final-exam-", student_id, ".html"),
+         # note: will need to copy to docs folder to publish
+         params = list(new_title = paste("Final Exam, STAT 243 for ", student_id)))
+}
+```
+]
+
+---
+# Examples
+
+- [Intro Stat Instructions](https://stacyderuiter.github.io/cotesting/test-2-instructions.html) and [test](https://stacyderuiter.github.io/cotesting/test2-Four.Student.html)
+- [Applied Regression Instructions](https://stacyderuiter.github.io/cotesting/final-exam-instructions.html) and [test](https://stacyderuiter.github.io/cotesting/final-exam-One.Student.html)
 
 ---
 # Fork my repo
+## github.com/stacyderuiter/cotesting
+
+.pull-left[
+.small[.center[
+&lt;https://cutt.ly/cotesting-repo&gt;
+]]
+
+&lt;img src="images/repo-qr.png" width="65%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;br&gt;
+&lt;img src="images/repo.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+class: center inverse huge-subsection
+
+# Survey...
+
+&lt;br&gt;
+&lt;br&gt;
+
+# doesn't say
 
 ---
 # + Reflections
 
+- Students perform well
+- Students collaborate productively!
+- Collaboration &amp; community reinforced?
+- Students learn during testing
+- Performance on BLIS steady
+- Making the tests is kinda fun
+
 ---
 # - Reflections
 
+- "Unfair" questions?
+- Writing = 2x standard take-home; marking same
+- Large set of datasets needed (or built!)
+
 ---
-# Thank you!
+# Thank you! 
 
 .pull-left[
-## Slides: 
-QR code for slides
+### &lt;https://cutt.ly/cotesting-slides&gt;
+
+&lt;img src="images/slides-qr.png" width="65%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-right[
-## Repository: 
-QR code for repo
+### &lt;https://cutt.ly/cotesting-repo&gt; 
+
+&lt;img src="images/repo-qr.png" width="65%" style="display: block; margin: auto;" /&gt;
+]
+
+.center[
+## sld33@calvin.edu
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
